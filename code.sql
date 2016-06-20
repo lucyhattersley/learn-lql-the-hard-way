@@ -11,6 +11,11 @@ CREATE TABLE person (
     age INTEGER
 );
 
+CREATE TABLE person_pet (
+    person_id INTEGER,
+    pet_id INTEGER
+);
+
 CREATE TABLE pet (
     id INTEGER PRIMARY KEY,
     name TEXT,
@@ -19,18 +24,14 @@ CREATE TABLE pet (
     dead INTEGER
 );
 
-CREATE TABLE car (
-    id INTEGER PRIMARY KEY,
-    make TEXT,
-    model TEXT,
-    license TEXT,
-    year INTEGER
-);
+-- CREATE TABLE car (
+--     id INTEGER PRIMARY KEY,
+--     make TEXT,
+--     model TEXT,
+--     license TEXT,
+--     year INTEGER
+-- );
 
-CREATE TABLE person_pet (
-    person_id INTEGER,
-    pet_id INTEGER
-);
 
 INSERT INTO person (id, first_name, last_name, age)
     VALUES (0, "Zed", "Shaw", 37);
@@ -71,7 +72,3 @@ INSERT INTO pet VALUES (1, "Gigantor", "Robot", 1, 0);
 
 /* the robot LIVES! */
 SELECT * FROM pet;
-
-/* Alter person table to add height and weight columns */
-ALTER TABLE person ADD COLUMN height INTEGER;
-ALTER TABLE person ADD COLUMN weight INTEGER;
