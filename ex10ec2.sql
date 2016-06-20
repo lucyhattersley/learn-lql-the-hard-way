@@ -14,7 +14,5 @@ CREATE TABLE person_address (
     );
 
 INSERT INTO person(ID,Fi) VALUES(1, "Lucy", "Hattersley",29);
-
 INSERT INTO address VALUES(0, "6A", "Vicars Hill", "SE13 7JH");
-
 INSERT INTO person_address VALUES(1,0);

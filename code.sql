@@ -1,8 +1,8 @@
 /*Delete the database */
-DROP TABLE person;
-DROP TABLE pet;
-DROP TABLE car;
-DROP TABLE person_pet;
+DROP TABLE IF EXISTS person;
+DROP TABLE IF EXISTS pet;
+DROP TABLE IF EXISTS car;
+DROP TABLE IF EXISTS person_pet;
 
 CREATE TABLE person (
     id INTEGER PRIMARY KEY,
@@ -71,3 +71,7 @@ INSERT INTO pet VALUES (1, "Gigantor", "Robot", 1, 0);
 
 /* the robot LIVES! */
 SELECT * FROM pet;
+
+/* Alter person table to add height and weight columns */
+ALTER TABLE person ADD COLUMN height INTEGER;
+ALTER TABLE person ADD COLUMN weight INTEGER;
